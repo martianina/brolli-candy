@@ -119,12 +119,7 @@ export interface HomeProps {
   candyMachineId: PublicKey;
 }
 const candyMachinOps = {
-  allowLists: [
-    {
-      list: require("../cmv3-demo-initialization/allowlist.json"),
-      groupLabel: "waoed",
-    },
-  ],
+  allowLists: [],
 };
 const Home = (props: HomeProps) => {
   const { connection } = useConnection();
@@ -263,17 +258,24 @@ const Home = (props: HomeProps) => {
       // debugger;
       candyMachineV3
         .mint(quantityString, {
-          groupLabel: guardLabel,
           nftGuards,
         })
         .then((items) => {
           console.log("Mint successful!", items);
           setMintedItems(items as any);
-          setAlertState({
-            open: true,
-            message: `Successfully minted ${items.length} NFT${items.length > 1 ? 's' : ''}!`,
-            severity: "success",
-          });
+          if (items && items.length > 0) {
+            setAlertState({
+              open: true,
+              message: `Successfully minted ${items.length} NFT${items.length > 1 ? 's' : ''}!`,
+              severity: "success",
+            });
+          } else {
+            setAlertState({
+              open: true,
+              message: "Minting completed, but no NFTs were returned. Please check your wallet.",
+              severity: "warning",
+            });
+          }
         })
         .catch((e) => {
           console.error("Mint failed:", e);

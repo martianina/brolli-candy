@@ -159,8 +159,9 @@ export default function useCandyMachineV3(
     ) => {
       console.log("Starting mint process...", { quantityString, opts, candyMachine: !!candyMachine });
 
-      if (!guardsAndGroups[opts.groupLabel || "default"])
-        throw new Error("Unknown guard group label");
+      const groupKey = opts.groupLabel || "default";
+      if (!guardsAndGroups[groupKey])
+        throw new Error(`Unknown guard group label: ${groupKey}`);
 
       const allowList = opts.groupLabel &&
         proofMemo.merkles[opts.groupLabel] && {
