@@ -19,8 +19,7 @@ import {
   Heading,
   Hero,
   MintCount,
-  NftWrapper,
-  NftWrapper2,
+  
   Root,
   StyledContainer,
 } from "./styles";
@@ -39,6 +38,8 @@ const Header = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+  z-index: 1002;
 `;
 const WalletContainer = styled.div`
   display: flex;
@@ -61,13 +62,13 @@ const WalletContainer = styled.div`
 `;
 
 const WalletAmount = styled.div`
-  color: black;
+  color: white;
   width: auto;
   padding: 5px 5px 5px 16px;
   min-width: 48px;
   min-height: auto;
   border-radius: 5px;
-  background-color: #85b1e2;
+  background: linear-gradient(135deg, #9945FF 0%, #00FFA3 100%);
   box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
     0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
   box-sizing: border-box;
@@ -98,8 +99,8 @@ const Wallet = styled.ul`
 const ConnectButton = styled(WalletMultiButton)`
   border-radius: 5px !important;
   padding: 6px 16px;
-  background-color: #fff;
-  color: #000;
+  background: linear-gradient(135deg, #9945FF 0%, #00FFA3 100%) !important;
+  color: #ffffff !important;
   margin: 0 auto;
 `;
 
@@ -280,18 +281,7 @@ const Home = (props: HomeProps) => {
     <main>
       <>
         <Header>
-          {/* <Link href='/'>
-            <img
-              style={{
-                filter: 'invert(1)',
-                maxWidth: '200px',
-                marginLeft: 30,
-                marginTop: 10,
-              }}
-              src='/logo.png'
-              alt='logo'
-            />
-          </Link> */}
+        
           <WalletContainer>
             <Wallet>
               {wallet ? (
@@ -306,6 +296,23 @@ const Home = (props: HomeProps) => {
           </WalletContainer>
         </Header>
         <Root>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: -2,
+            }}
+          >
+            <source src="/background.mp4" type="video/mp4" />
+          </video>
           <div className="cloud-content">
             {[...Array(7)].map((cloud, index) => (
               <div key={index} className={`cloud-${index + 1} cloud-block`}>
@@ -318,22 +325,19 @@ const Home = (props: HomeProps) => {
 
             <Hero>
               <Heading>
-                <Link href="/">
-                  <img
-                    style={{
-                      filter: "invert(1)",
-                      maxWidth: "350px",
-                    }}
-                    src="/logo.png"
-                    alt="logo"
-                  />
-                </Link>
-              </Heading>
+      <img
+        src="/Brolli-hero.png"
+        alt="Brolli for BUIDLers"
+        style={{
+          maxWidth: "400px",
+          margin: "0 auto 20px",
+          display: "block",
+        }}
+      />
+    </Heading>
 
-              <p>
-                6942 Rejected f00kers here to f00k shit up. 3 mints max per
-                wallet. Free. f00k f00k Mother f00kers.
-              </p>
+  
+             
 
               {guardStates.isStarted && (
                 <MintCount>
@@ -403,38 +407,85 @@ const Home = (props: HomeProps) => {
               setMintedItems={setMintedItems}
             />
           </StyledContainer>
-          <NftWrapper>
-            <div className="marquee-wrapper">
-              <div className="marquee">
-                {[...Array(21)].map((item, index) => (
-                  <img
-                    key={index}
-                    src={`/nfts/${index + 1}.jpeg`}
-                    height="200px"
-                    width="200px"
-                    alt=""
-                  />
-                ))}
-              </div>
-            </div>
-          </NftWrapper>
-          <NftWrapper2>
-            <div className="marquee-wrapper second">
-              <div className="marquee">
-                {[...Array(21)].map((item, index) => (
-                  <img
-                    key={index}
-                    src={`/nfts/${index + 1}.jpeg`}
-                    height="200px"
-                    width="200px"
-                    alt=""
-                  />
-                ))}
-              </div>
-            </div>
-          </NftWrapper2>
+          
         </Root>
       </>
+      <Root>
+  {/* ... your existing clouds, hero, mint button, marquee ... */}
+</Root>
+
+{/* -------------------------------
+    Brolli Extra Content Section
+    ------------------------------- */}
+<StyledContainer>
+  
+
+  <Hero>
+    
+    <h2 style={{ fontSize: "28px", marginBottom: "10px", color: "#B794F6" }}>
+      Cover against patent trolls
+    </h2>
+    
+  </Hero>
+
+
+
+  <Hero>
+    <div style={{ display: "flex", gap: "40px", justifyContent: "center" }}>
+      <div>
+        <h3 style={{ fontSize: "36px", color: "#00FFA3" }}>10K+</h3>
+        <p>Blockchain patents</p>
+      </div>
+      <div>
+        <h3 style={{ fontSize: "36px", color: "#00FFA3" }}>85%</h3>
+        <p>Held by enterprises</p>
+      </div>
+      <div>
+        <h3 style={{ fontSize: "36px", color: "#00FFA3" }}>⚠️</h3>
+        <p>Waiting to strike</p>
+      </div>
+    </div>
+  </Hero>
+
+  <Hero>
+    <div style={{ textAlign: "center", marginTop: "40px" }}>
+      <a
+        href="https://optilex.io/brolli"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          background: "linear-gradient(135deg, #9945FF 0%, #00FFA3 100%)",
+          color: "#ffffff",
+          textDecoration: "none",
+          padding: "15px 30px",
+          fontSize: "18px",
+          fontFamily: "'Catamaran', sans-serif",
+          fontWeight: "bold",
+          borderRadius: "8px",
+          cursor: "pointer",
+          transition: "all 0.3s ease",
+          boxShadow: "0px 4px 8px rgba(153, 69, 255, 0.3)",
+          position: "relative",
+          zIndex: 1000,
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.background = "linear-gradient(135deg, #8B3DFF 0%, #00E094 100%)";
+          e.currentTarget.style.transform = "translateY(-2px)";
+          e.currentTarget.style.boxShadow = "0px 6px 12px rgba(153, 69, 255, 0.4)";
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.background = "linear-gradient(135deg, #9945FF 0%, #00FFA3 100%)";
+          e.currentTarget.style.transform = "translateY(0px)";
+          e.currentTarget.style.boxShadow = "0px 4px 8px rgba(153, 69, 255, 0.3)";
+        }}
+      >
+        Find out more about Brolli
+      </a>
+    </div>
+  </Hero>
+</StyledContainer>
+
       <Snackbar
         open={alertState.open}
         autoHideDuration={6000}

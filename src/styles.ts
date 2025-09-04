@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledContainer = styled('div')<any>`
   position: relative;
+  z-index: 1001;
   width: 100%;
   max-width: 1200px;
   margin-right: auto;
@@ -26,7 +27,7 @@ export const StyledContainer = styled('div')<any>`
 
 export const Root = styled('div')`
   position: relative;
-  z-index: 99;
+  z-index: 1000;
   .cloud-content {
     bottom: 0;
     left: 0;
@@ -120,8 +121,9 @@ export const Root = styled('div')`
     box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
     position: relative;
-    background: url(/mf.png);
+    background: rgba(255, 255, 255, 0.1);
     background-repeat: no-repeat;
+    border-radius: 50%;
   }
 
   // .cloud:after,
@@ -631,7 +633,7 @@ export const Hero = styled('div')`
   margin: 80px 0 80px;
 `;
 export const MintCount = styled('h3')`
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Catamaran', sans-serif;
   font-size: 30px;
   line-height: 1;
   margin-bottom: 20px;
@@ -639,7 +641,7 @@ export const MintCount = styled('h3')`
   font-weight: 700;
 `;
 export const Heading = styled('h1')`
-  font-family: nabana;
+  font-family: 'Catamaran', sans-serif;
   letter-spacing: 2px;
   margin-bottom: -20px;
   color: #897ea5;

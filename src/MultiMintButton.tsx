@@ -11,11 +11,11 @@ import { GuardGroupStates, ParsedPricesForUI, PaymentRequired } from "./hooks/ty
 export const CTAButton = styled(Button)`
   display: inline-block !important;
   margin: 10px auto !important;
-  background-color: #fff !important;
-  color: #000 !important;
+  background: linear-gradient(135deg, #9945FF 0%, #00FFA3 100%) !important;
+  color: #ffffff !important;
   min-width: 258px !important;
   font-size: 1em !important;
-  font-family: "Patrick Hand", cursive;
+  font-family: 'Catamaran', sans-serif;
   font-weight: bold !important;
 `;
 
@@ -31,7 +31,7 @@ export const Minus = styled.button`
   border: 0;
   border-radius: 5px;
   box-sizing: border-box;
-  font-family: "Patrick Hand", cursive;
+  font-family: 'Catamaran', sans-serif;
   vertical-align: middle;
   transition: all linear 0.3s;
 
@@ -61,7 +61,7 @@ export const NumericField = styled.input`
   box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
     0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
   box-sizing: border-box;
-  font-family: "Patrick Hand", cursive;
+  font-family: 'Catamaran', sans-serif;
   font-weight: 500;
   line-height: 1px;
   border: none;
@@ -303,8 +303,7 @@ export const MultiMintButton = ({
       </div>
       {!isSoldOut && isActive && (
         <h3>
-          Total estimated cost (Solana fees included): {totalSolCost} SOL
-          {totalTokenCostsString}
+          Limited supply of soulbound NFTs on Solana
         </h3>
       )}
         {guardStates.messages?.map((m, i) => (

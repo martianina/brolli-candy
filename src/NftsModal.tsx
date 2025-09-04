@@ -28,7 +28,7 @@ export const Action = styled.button`
   border: 0;
   border-radius: 5px;
   box-sizing: border-box;
-  font-family: "Patrick Hand", cursive;
+  font-family: 'Catamaran', sans-serif;
   vertical-align: middle;
   transition: all linear 0.3s;
 
