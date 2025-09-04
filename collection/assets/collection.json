@@ -1,0 +1,15 @@
+{
+  "name": "Brolli Solana Collection",
+  "description": "Brolli Solana v.1 - For BUIDLers",
+  "image": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+  "external_url": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreidc7qbkdsfirbetsu5owm56oeqkhwhqlxpfgjio4qy3xexigod2nq",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}

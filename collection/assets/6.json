@@ -1,0 +1,24 @@
+{
+  "name": "Brolli #6",
+  "description": "For BUIDLers",
+  "image": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+  "attributes": [
+    {
+      "trait_type": "Collection",
+      "value": "Brolli Solana v.1"
+    },
+    {
+      "trait_type": "Provenance",
+      "value": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreidc7qbkdsfirbetsu5owm56oeqkhwhqlxpfgjio4qy3xexigod2nq"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}

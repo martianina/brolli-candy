@@ -1,0 +1,98 @@
+{
+  "program": {
+    "candyMachine": "HEQ8CXRTG2M2bS3JeBaQY1GSH3iYpA98wqhdLQ6iwBqx",
+    "candyGuard": "",
+    "candyMachineCreator": "EJQQXDnRw9ThatkFKxAyypBBF8ksHVAuk5qsjQ3D5YYX",
+    "collectionMint": "DPAw4nsni4vWRhEq4GDkrCQcEBpbTtTev45fbAFhDcQN"
+  },
+  "items": {
+    "-1": {
+      "name": "Brolli Solana Collection",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "829ad4d7d3dc647e6989d840baa9344a163878b705ec3c38951802b851663030",
+      "metadata_link": "https://gateway.irys.xyz/FbQBX7gJsfm1GCWX5Biecb6bzE9kKTtQWv4owHgAZwKn",
+      "onChain": true
+    },
+    "0": {
+      "name": "Brolli #0",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "9ff69bf887c507852fc1cc0f89aac69cd2c8f050081485fd30d8b77b6522711b",
+      "metadata_link": "https://gateway.irys.xyz/4wpNBiSaKyhKYNa1FDuiCC6aaZuEfku46TYDTriCwFgj",
+      "onChain": true
+    },
+    "1": {
+      "name": "Brolli #1",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "48394aaafda560e5b00ba7d2bd4b8bf323db54cb8a8ea7a25a5792dba42b1872",
+      "metadata_link": "https://gateway.irys.xyz/CQge2jvsRxNsXUm62trGBo8H8cxegAzPgXupNUNFzsvi",
+      "onChain": true
+    },
+    "2": {
+      "name": "Brolli #2",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "453e4f5ab00ec6b37fbd3428b5443fd9b759959c1c1931a9f34593deb9b6fb40",
+      "metadata_link": "https://gateway.irys.xyz/4kqTpbgSVkR5TU7Dq8cm87PAwccTq4h3HzJiNsuqh6Np",
+      "onChain": true
+    },
+    "3": {
+      "name": "Brolli #3",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "6549c7fde761bffee966706161affc56029cb16443ba312dfe4abe992ef46db5",
+      "metadata_link": "https://gateway.irys.xyz/4ENk4wMoTk5LBFzMd1Kp2wiSUMAQ3KwH6aiBovKvT3kS",
+      "onChain": true
+    },
+    "4": {
+      "name": "Brolli #4",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "2544e823bfeb14f964ccf715c620cbabd7b0bf9b0cd1b1000d20f24bd369ce9c",
+      "metadata_link": "https://gateway.irys.xyz/7JpqUne5qwyr4nFUFbCdmG3c9kYota9VNv9VDQVTi4K3",
+      "onChain": true
+    },
+    "5": {
+      "name": "Brolli #5",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "d01ffe95b89cf34351c1a9e7574fd3946dfb72e8843894e1bb2b25532ee1372c",
+      "metadata_link": "https://gateway.irys.xyz/2LNtoAKLsdS264usXLnJEet7vgftf23UeBu7qG3zcYZ3",
+      "onChain": true
+    },
+    "6": {
+      "name": "Brolli #6",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "117a9a1d54258a19617472029c2f1d57b4458c6d23a50d523915783b4d734a05",
+      "metadata_link": "https://gateway.irys.xyz/Hc9Up9g4Vc67zaA2cNhQ7X8S41GhnckqGw1QCQnaTqYm",
+      "onChain": true
+    },
+    "7": {
+      "name": "Brolli #7",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "8d1694c811cc06b555f9c43f815b5d8381c652c1af1df665a9a79645b402a21d",
+      "metadata_link": "https://gateway.irys.xyz/GjVRPFkLP1Bdf6u8KxPU7LDexzwfyetD1GKXRSjRAxDt",
+      "onChain": true
+    },
+    "8": {
+      "name": "Brolli #8",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "99373166023e5fe51c3efca92b57ce4f48f0cdfa20454903e6df34b42094fc41",
+      "metadata_link": "https://gateway.irys.xyz/ABwsF67ZxrMZ3K5TKgwJbHUYdVqVLTmSZUhNhTodVZTy",
+      "onChain": true
+    },
+    "9": {
+      "name": "Brolli #9",
+      "image_hash": "4bf0542cb4d798af19aa4b5c0a66db28ce826097de7d8f4b693c2c72142fcf34",
+      "image_link": "https://tan-everyday-mite-419.mypinata.cloud/ipfs/bafkreialme2ca3b36nzq5rqqdqaw3k2le4uvgrdxtdj33t2j4sn44amisi",
+      "metadata_hash": "572a9bdaa3fe79d4580e980f0c8aa373c38a1fa3c659be95b9dfa7f13933f4fb",
+      "metadata_link": "https://gateway.irys.xyz/8eMDpuaycRHzKjYHTEvSKqe9koFSNnYMu8RygFiVxk8V",
+      "onChain": true
+    }
+  }
+}
