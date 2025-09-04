@@ -265,6 +265,7 @@ export const MultiMintButton = ({
         <CTAButton
           disabled={disabled}
           onClick={async () => {
+            console.log("MINT button clicked!");
             console.log("isActive gatekeeperNetwork", {
               isActive,
               gatekeeperNetwork,

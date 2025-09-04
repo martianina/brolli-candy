@@ -157,6 +157,8 @@ export default function useCandyMachineV3(
         nftGuards?: NftPaymentMintSettings[];
       } = {}
     ) => {
+      console.log("Starting mint process...", { quantityString, opts, candyMachine: !!candyMachine });
+
       if (!guardsAndGroups[opts.groupLabel || "default"])
         throw new Error("Unknown guard group label");
 
@@ -167,7 +169,19 @@ export default function useCandyMachineV3(
 
       let nfts: (Sft | SftWithToken | Nft | NftWithToken)[] = [];
       try {
-        if (!candyMachine) throw new Error("Candy Machine not loaded yet!");
+        if (!candyMachine) {
+          console.error("Candy Machine not loaded yet!");
+          throw new Error("Candy Machine not loaded yet!");
+        }
+
+        console.log("Candy machine loaded:", candyMachine.address.toString());
+        console.log("Items remaining:", candyMachine.itemsRemaining.toNumber());
+        console.log("Wallet connected:", !!wallet.publicKey);
+        console.log("Wallet address:", wallet.publicKey?.toString());
+
+        if (!wallet.publicKey) {
+          throw new Error("Wallet not connected!");
+        }
 
         setStatus((x) => ({
           ...x,
@@ -192,9 +206,11 @@ export default function useCandyMachineV3(
             })
           );
         }
+        console.log("Building transactions for", quantityString, "items");
         for (let index = 0; index < quantityString; index++) {
-          transactionBuilders.push(
-            await mintFromCandyMachineBuilder(mx, {
+          console.log(`Building transaction ${index + 1}/${quantityString}`);
+          try {
+            const txBuilder = await mintFromCandyMachineBuilder(mx, {
               candyMachine,
               collectionUpdateAuthority: candyMachine.authorityAddress, // mx.candyMachines().pdas().authority({candyMachine: candyMachine.address})
               group: opts.groupLabel,
@@ -204,8 +220,13 @@ export default function useCandyMachineV3(
                 nftGate: opts.nftGuards && opts.nftGuards[index]?.gate,
                 allowList,
               },
-            })
-          );
+            });
+            transactionBuilders.push(txBuilder);
+            console.log(`Transaction ${index + 1} built successfully`);
+          } catch (txError) {
+            console.error(`Failed to build transaction ${index + 1}:`, txError);
+            throw txError;
+          }
         }
         const blockhash = await mx.rpc().getLatestBlockhash();
 
@@ -235,15 +256,24 @@ export default function useCandyMachineV3(
             commitment: "processed",
           });
         }
+        console.log(`Sending ${signedTransactions.length} transactions...`);
         const output = await Promise.all(
           signedTransactions.map((tx, i) => {
+            console.log(`Sending transaction ${i + 1}/${signedTransactions.length}`);
             return mx
               .rpc()
               .sendAndConfirmTransaction(tx, { commitment: "finalized" })
-              .then((tx) => ({
-                ...tx,
-                context: transactionBuilders[i].getContext() as any,
-              }));
+              .then((tx) => {
+                console.log(`Transaction ${i + 1} confirmed:`, tx.signature);
+                return {
+                  ...tx,
+                  context: transactionBuilders[i].getContext() as any,
+                };
+              })
+              .catch((txError) => {
+                console.error(`Transaction ${i + 1} failed:`, txError);
+                throw txError;
+              });
           })
         );
         nfts = await Promise.all(

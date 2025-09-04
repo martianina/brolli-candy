@@ -211,6 +211,32 @@ const Home = (props: HomeProps) => {
 
   const startMint = useCallback(
     async (quantityString: number = 1) => {
+      console.log("startMint called with quantity:", quantityString);
+      console.log("candyMachineV3 status:", candyMachineV3.status);
+      console.log("guardStates:", guardStates);
+      console.log("guards:", guards);
+      console.log("wallet connected:", !!wallet.publicKey);
+
+      if (!candyMachineV3.candyMachine) {
+        console.error("Candy machine not loaded!");
+        setAlertState({
+          open: true,
+          message: "Candy machine not loaded yet. Please wait.",
+          severity: "error",
+        });
+        return;
+      }
+
+      if (!wallet.publicKey) {
+        console.error("Wallet not connected!");
+        setAlertState({
+          open: true,
+          message: "Please connect your wallet first.",
+          severity: "error",
+        });
+        return;
+      }
+
       const nftGuards: NftPaymentMintSettings[] = Array(quantityString)
         .fill(undefined)
         .map((_, i) => {
@@ -241,17 +267,24 @@ const Home = (props: HomeProps) => {
           nftGuards,
         })
         .then((items) => {
+          console.log("Mint successful!", items);
           setMintedItems(items as any);
-        })
-        .catch((e) =>
           setAlertState({
             open: true,
-            message: e.message,
+            message: `Successfully minted ${items.length} NFT${items.length > 1 ? 's' : ''}!`,
+            severity: "success",
+          });
+        })
+        .catch((e) => {
+          console.error("Mint failed:", e);
+          setAlertState({
+            open: true,
+            message: e.message || "Minting failed! Please try again!",
             severity: "error",
           })
-        );
+        });
     },
-    [candyMachineV3.mint, guards]
+    [candyMachineV3.mint, guards, guardStates, wallet.publicKey]
   );
 
   useEffect(() => {
